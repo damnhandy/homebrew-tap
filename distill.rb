@@ -11,7 +11,7 @@ class Distill < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_darwin_amd64.tar.gz"
-      sha256 "4eca628365c526e2b3e9a7f58860c47f7eb0e64b7c2706d3dcda59a1317bf677"
+      sha256 "8d3976e1b401b76490137890f777f69d38126981eb3264ce64da3da312585d55"
 
       define_method(:install) do
         bin.install "distill"
@@ -19,7 +19,7 @@ class Distill < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_darwin_arm64.tar.gz"
-      sha256 "65f9bf477259a067631d57a638f333e762f80c2ae0711945a3cf336c5561253c"
+      sha256 "7ab91a349383912285c1e679ef9d9209f4328884f36ca5fcd252e4fc4f6cda7f"
 
       define_method(:install) do
         bin.install "distill"
@@ -30,14 +30,14 @@ class Distill < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_linux_amd64.tar.gz"
-      sha256 "1f339b085866656a06f9594851d387d3c8923666f7ed619a6c5f1d6d8a7edb03"
+      sha256 "605409765cfafe3dae239eefec6e08e51d0f3fa2294376a921f3d113940f3360"
       define_method(:install) do
         bin.install "distill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_linux_arm64.tar.gz"
-      sha256 "c8a1d19ac97f5641c3d35b0869bda1751e4241810d8a94164a1edcfecd64cc54"
+      sha256 "0af2698fbda614efbf751a7d7aca790a5d7742d9abc85f6da4ccb02367fd5d9a"
       define_method(:install) do
         bin.install "distill"
       end
