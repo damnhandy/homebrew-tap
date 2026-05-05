@@ -5,21 +5,21 @@
 class Distill < Formula
   desc "Build minimal, immutable OCI images from enterprise Linux base distributions"
   homepage "https://github.com/damnhandy/distill"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_darwin_amd64.tar.gz"
-      sha256 "8d3976e1b401b76490137890f777f69d38126981eb3264ce64da3da312585d55"
+      url "https://github.com/damnhandy/distill/releases/download/v0.3.1/distill_darwin_amd64.tar.gz"
+      sha256 "b9188bf03bde26c69bc14d550093f4529d938e6261938301635b6bb09e9f4632"
 
       define_method(:install) do
         bin.install "distill"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_darwin_arm64.tar.gz"
-      sha256 "7ab91a349383912285c1e679ef9d9209f4328884f36ca5fcd252e4fc4f6cda7f"
+      url "https://github.com/damnhandy/distill/releases/download/v0.3.1/distill_darwin_arm64.tar.gz"
+      sha256 "20cc66628f2f7d7c409c9637472317f220bebefee7f302e73455ddd1fc0f2f97"
 
       define_method(:install) do
         bin.install "distill"
@@ -29,15 +29,15 @@ class Distill < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_linux_amd64.tar.gz"
-      sha256 "605409765cfafe3dae239eefec6e08e51d0f3fa2294376a921f3d113940f3360"
+      url "https://github.com/damnhandy/distill/releases/download/v0.3.1/distill_linux_amd64.tar.gz"
+      sha256 "c9accf093b870d4ff4424d02c9f8430e4632691928f00d33bb8e4b6c5c2bc9f9"
       define_method(:install) do
         bin.install "distill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/damnhandy/distill/releases/download/v0.3.0/distill_linux_arm64.tar.gz"
-      sha256 "0af2698fbda614efbf751a7d7aca790a5d7742d9abc85f6da4ccb02367fd5d9a"
+      url "https://github.com/damnhandy/distill/releases/download/v0.3.1/distill_linux_arm64.tar.gz"
+      sha256 "f4227ab3dcba876843dafa24425abf942af615447f744108f7e787b9b6489f90"
       define_method(:install) do
         bin.install "distill"
       end
